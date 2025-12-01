@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Learning Loft LLC | In-Home Daycare</title>
+    <meta name="description" content="The Learning Loft LLC provides loving, educational in-home childcare for infants and toddlers.">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'loft-blue': '#4A90E2',
+                        'loft-yellow': '#FFD166',
+                        'loft-green': '#06D6A0',
+                        'loft-pink': '#EF476F',
+                        'loft-dark': '#073B4C',
+                        'loft-light': '#F8F9FA',
+                    },
+                    fontFamily: {
+                        sans: ['Lato', 'sans-serif'],
+                        display: ['Fredoka', 'cursive'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+        /* Custom tweaks */
+        body {
+            font-family: 'Lato', sans-serif;
+            color: #073B4C;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Fredoka', cursive;
+        }
+        .blob-shape {
+            border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+        }
+    </style>
+</head>
+<body class="bg-loft-light text-loft-dark antialiased">
+
+<!-- Navigation -->
+<nav class="bg-white shadow-md fixed w-full z-50 top-0 transition-all duration-300" id="navbar">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-20">
+            <div class="flex items-center">
+                <a href="#" class="flex items-center space-x-2">
+                    <!-- Simple Logo Icon -->
+                    <div class="bg-loft-yellow p-2 rounded-full text-white">
+                        <i data-lucide="blocks" class="w-6 h-6"></i>
+                    </div>
+                    <span class="font-display font-semibold text-2xl text-loft-blue tracking-wide">The Learning Loft<span class="text-xs text-gray-400 block -mt-1 font-sans">LLC</span></span>
+                </a>
+            </div>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#home" class="text-gray-600 hover:text-loft-blue font-medium transition">Home</a>
+                <a href="#about" class="text-gray-600 hover:text-loft-blue font-medium transition">About Us</a>
+                <a href="#philosophy" class="text-gray-600 hover:text-loft-blue font-medium transition">Our Philosophy</a>
+                <a href="#schedule" class="text-gray-600 hover:text-loft-blue font-medium transition">Daily Rhythm</a>
+                <a href="#contact" class="px-5 py-2.5 rounded-full bg-loft-blue text-white font-medium hover:bg-blue-600 transition shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">Enrollment</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden flex items-center">
+                <button id="mobile-menu-btn" class="text-gray-600 hover:text-loft-blue focus:outline-none p-2">
+                    <i data-lucide="menu" class="w-8 h-8"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Menu Panel -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full">
+        <div class="px-4 pt-2 pb-6 space-y-1 shadow-lg">
+            <a href="#home" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-loft-blue hover:bg-gray-50">Home</a>
+            <a href="#about" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-loft-blue hover:bg-gray-50">About Us</a>
+            <a href="#philosophy" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-loft-blue hover:bg-gray-50">Our Philosophy</a>
+            <a href="#schedule" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-loft-blue hover:bg-gray-50">Daily Rhythm</a>
+            <a href="#contact" class="block px-3 py-3 mt-4 text-center rounded-md text-base font-medium bg-loft-blue text-white hover:bg-blue-600">Contact Us</a>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section id="home" class="relative pt-20 lg:pt-28 pb-20 lg:pb-32 overflow-hidden">
+    <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-loft-yellow opacity-10 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 bg-loft-pink opacity-10 rounded-full blur-3xl"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="text-center lg:text-left space-y-6">
+                <div class="inline-block px-4 py-1.5 rounded-full bg-loft-blue bg-opacity-10 text-loft-blue font-semibold text-sm tracking-wide mb-2">
+                    Now Enrolling: Ages 6 weeks - 5 years
+                </div>
+                <h1 class="text-4xl lg:text-6xl font-display font-bold text-loft-dark leading-tight">
+                    Where Little Minds <br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-loft-blue to-loft-green">Soar & Explore</span>
+                </h1>
+                <p class="text-lg text-gray-600 max-w-lg mx-auto lg:mx-0 leading-relaxed">
+                    The Learning Loft LLC offers a cozy, safe, and stimulating in-home environment where your child is treated like family. We focus on play-based learning and social development.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                    <a href="#contact" class="w-full sm:w-auto px-8 py-3.5 rounded-full bg-loft-pink text-white font-bold hover:bg-pink-600 transition shadow-lg text-center">
+                        Schedule a Tour
+                    </a>
+                    <a href="#about" class="w-full sm:w-auto px-8 py-3.5 rounded-full bg-white text-loft-dark border-2 border-gray-100 font-bold hover:border-loft-blue hover:text-loft-blue transition shadow-sm text-center">
+                        Learn More
+                    </a>
+                </div>
+
+                <div class="pt-8 flex items-center justify-center lg:justify-start space-x-6 text-gray-500 text-sm font-medium">
+                    <div class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 text-loft-green mr-2"></i> State Licensed</div>
+                    <div class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 text-loft-green mr-2"></i> CPR Certified</div>
+                </div>
+            </div>
+
+            <div class="relative lg:h-auto">
+                <!-- Decorative blobs -->
+                <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-gradient-to-br from-loft-blue to-loft-green opacity-20 blob-shape -z-10"></div>
+
+                <!-- Main Image with gentle border radius -->
+                <img
+                        src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+                        alt="Children playing with toys"
+                        class="rounded-[2rem] shadow-2xl w-full object-cover h-96 lg:h-[500px] transform rotate-2 hover:rotate-0 transition duration-500"
+                >
+
+                <!-- Floating Badge -->
+                <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-xl hidden md:block">
+                    <div class="flex items-center gap-3">
+                        <div class="bg-loft-yellow p-3 rounded-full text-white">
+                            <i data-lucide="star" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <p class="font-bold text-loft-dark text-lg">5 Star Rated</p>
+                            <p class="text-xs text-gray-500">By Local Parents</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl lg:text-4xl font-bold text-loft-dark mb-4">Why Families Choose The Loft</h2>
+            <div class="w-24 h-1.5 bg-loft-yellow mx-auto rounded-full"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Card 1 -->
+            <div class="bg-loft-light p-8 rounded-2xl hover:shadow-lg transition duration-300 border border-transparent hover:border-loft-blue group">
+                <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center text-loft-blue mb-6 group-hover:scale-110 transition">
+                    <i data-lucide="shield-check" class="w-7 h-7"></i>
+                </div>
+                <h3 class="text-xl font-bold text-loft-dark mb-3">Safe & Secure</h3>
+                <p class="text-gray-600 leading-relaxed">
+                    Your peace of mind is our priority. Our home is child-proofed, strictly monitored, and meets all state safety regulations.
+                </p>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="bg-loft-light p-8 rounded-2xl hover:shadow-lg transition duration-300 border border-transparent hover:border-loft-green group">
+                <div class="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center text-loft-green mb-6 group-hover:scale-110 transition">
+                    <i data-lucide="sprout" class="w-7 h-7"></i>
+                </div>
+                <h3 class="text-xl font-bold text-loft-dark mb-3">Organic Meals</h3>
+                <p class="text-gray-600 leading-relaxed">
+                    We provide nutritious, home-cooked breakfast, lunch, and snacks using fresh, often organic ingredients to fuel growing bodies.
+                </p>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="bg-loft-light p-8 rounded-2xl hover:shadow-lg transition duration-300 border border-transparent hover:border-loft-pink group">
+                <div class="w-14 h-14 bg-pink-100 rounded-full flex items-center justify-center text-loft-pink mb-6 group-hover:scale-110 transition">
+                    <i data-lucide="brain-circuit" class="w-7 h-7"></i>
+                </div>
+                <h3 class="text-xl font-bold text-loft-dark mb-3">Curriculum Based</h3>
+                <p class="text-gray-600 leading-relaxed">
+                    We follow a play-based curriculum that prepares children for kindergarten through art, music, sensory play, and early literacy.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="py-20 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col-reverse lg:flex-row items-center gap-16">
+            <!-- Image Grid -->
+            <div class="w-full lg:w-1/2 relative">
+                <div class="grid grid-cols-2 gap-4">
+                    <img src="https://images.unsplash.com/photo-1596464716127-f9a0859b4bce?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Reading time" class="rounded-2xl shadow-lg w-full h-64 object-cover transform translate-y-8">
+                    <img src="https://images.unsplash.com/photo-1566004100631-35d015d6a491?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Art project" class="rounded-2xl shadow-lg w-full h-64 object-cover">
+                </div>
+                <!-- Decor element -->
+                <div class="absolute -z-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[110%] h-[110%] border-4 border-loft-yellow rounded-[3rem] opacity-30"></div>
+            </div>
+
+            <!-- Content -->
+            <div class="w-full lg:w-1/2">
+                <h2 class="text-loft-pink font-bold tracking-wider uppercase text-sm mb-2">About Us</h2>
+                <h3 class="text-3xl lg:text-4xl font-bold text-loft-dark mb-6">More Than Just Daycare,<br>We Are Family.</h3>
+                <p class="text-gray-600 mb-6 text-lg leading-relaxed">
+                    Welcome to <strong>The Learning Loft LLC</strong>. Founded by Sarah Jenkins, a certified early childhood educator and mother of two, our goal has always been simple: to create the daycare we wished we had for our own children.
+                </p>
+                <p class="text-gray-600 mb-8 leading-relaxed">
+                    Located in a quiet neighborhood, our facility combines the resources of a commercial center with the warmth of a home. We believe that low ratios (1:4) allow us to truly know each child's personality, learning style, and needs.
+                </p>
+
+                <div class="space-y-4">
+                    <div class="flex items-start">
+                        <i data-lucide="check" class="w-6 h-6 text-loft-blue mt-0.5 flex-shrink-0"></i>
+                        <div class="ml-4">
+                            <h4 class="font-bold text-loft-dark">Certified & Experienced</h4>
+                            <p class="text-sm text-gray-500">CDA Credentialed, First Aid/CPR Certified, Background Checked.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-lucide="check" class="w-6 h-6 text-loft-blue mt-0.5 flex-shrink-0"></i>
+                        <div class="ml-4">
+                            <h4 class="font-bold text-loft-dark">Outdoor Exploration</h4>
+                            <p class="text-sm text-gray-500">Large fenced backyard with age-appropriate playsets and garden.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Philosophy/Curriculum Strip -->
+<section id="philosophy" class="py-20 bg-loft-dark text-white relative">
+    <div class="absolute top-0 left-0 w-full h-full overflow-hidden opacity-10">
+        <!-- Pattern overlay placeholder -->
+        <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <pattern id="dots" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                    <circle cx="2" cy="2" r="1" fill="white"/>
+                </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#dots)"/>
+        </svg>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+        <h2 class="text-3xl lg:text-4xl font-bold mb-6">Our Philosophy</h2>
+        <p class="max-w-3xl mx-auto text-lg text-blue-100 leading-relaxed mb-12">
+            We believe that children learn best when they feel safe, loved, and free to explore. Our curriculum is emergent, meaning we follow the children's interests to create lesson plans that engage them naturally.
+        </p>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div class="text-center">
+                <div class="w-20 h-20 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4 backdrop-blur-sm">
+                    <i data-lucide="palette" class="w-10 h-10 text-loft-yellow"></i>
+                </div>
+                <h4 class="font-bold text-xl">Creativity</h4>
+            </div>
+            <div class="text-center">
+                <div class="w-20 h-20 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4 backdrop-blur-sm">
+                    <i data-lucide="users" class="w-10 h-10 text-loft-pink"></i>
+                </div>
+                <h4 class="font-bold text-xl">Social Skills</h4>
+            </div>
+            <div class="text-center">
+                <div class="w-20 h-20 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4 backdrop-blur-sm">
+                    <i data-lucide="book-open" class="w-10 h-10 text-loft-green"></i>
+                </div>
+                <h4 class="font-bold text-xl">Literacy</h4>
+            </div>
+            <div class="text-center">
+                <div class="w-20 h-20 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4 backdrop-blur-sm">
+                    <i data-lucide="music" class="w-10 h-10 text-loft-blue"></i>
+                </div>
+                <h4 class="font-bold text-xl">Music & Movement</h4>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Daily Schedule -->
+<section id="schedule" class="py-20 bg-loft-light">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl lg:text-4xl font-bold text-loft-dark mb-4">A Day in the Life</h2>
+            <p class="text-gray-600">Structure provides security, but flexibility allows for fun.</p>
+        </div>
+
+        <div class="space-y-6 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-300 before:to-transparent">
+
+            <!-- Schedule Item -->
+            <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-slate-300 group-[.is-active]:bg-loft-yellow text-slate-500 group-[.is-active]:text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                    <i data-lucide="sun" class="w-5 h-5"></i>
+                </div>
+                <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-4 rounded-xl shadow-sm border border-slate-100">
+                    <div class="flex items-center justify-between space-x-2 mb-1">
+                        <div class="font-bold text-slate-900">Arrival & Free Play</div>
+                        <time class="font-caveat font-medium text-loft-blue">7:30 AM</time>
+                    </div>
+                    <div class="text-slate-500 text-sm">Welcome greetings, hand washing, and self-directed exploration at stations.</div>
+                </div>
+            </div>
+
+            <!-- Schedule Item -->
+            <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-slate-300 group-[.is-active]:bg-loft-green text-slate-500 group-[.is-active]:text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                    <i data-lucide="apple" class="w-5 h-5"></i>
+                </div>
+                <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-4 rounded-xl shadow-sm border border-slate-100">
+                    <div class="flex items-center justify-between space-x-2 mb-1">
+                        <div class="font-bold text-slate-900">Morning Circle & Snack</div>
+                        <time class="font-caveat font-medium text-loft-blue">9:00 AM</time>
+                    </div>
+                    <div class="text-slate-500 text-sm">Story time, songs, weather chart, followed by a nutritious snack.</div>
+                </div>
+            </div>
+
+            <!-- Schedule Item -->
+            <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-slate-300 group-[.is-active]:bg-loft-blue text-slate-500 group-[.is-active]:text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                    <i data-lucide="footprints" class="w-5 h-5"></i>
+                </div>
+                <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-4 rounded-xl shadow-sm border border-slate-100">
+                    <div class="flex items-center justify-between space-x-2 mb-1">
+                        <div class="font-bold text-slate-900">Outdoor Play & Activities</div>
+                        <time class="font-caveat font-medium text-loft-blue">10:00 AM</time>
+                    </div>
+                    <div class="text-slate-500 text-sm">Gross motor play in the yard or structured crafts/sensory activities indoors.</div>
+                </div>
+            </div>
+
+            <!-- Schedule Item -->
+            <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-slate-300 group-[.is-active]:bg-loft-pink text-slate-500 group-[.is-active]:text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                    <i data-lucide="moon" class="w-5 h-5"></i>
+                </div>
+                <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-4 rounded-xl shadow-sm border border-slate-100">
+                    <div class="flex items-center justify-between space-x-2 mb-1">
+                        <div class="font-bold text-slate-900">Lunch & Nap Time</div>
+                        <time class="font-caveat font-medium text-loft-blue">12:00 PM</time>
+                    </div>
+                    <div class="text-slate-500 text-sm">Healthy lunch followed by quiet rest time to recharge little batteries.</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials -->
+<section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-center text-loft-dark mb-12">Parent Love</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-gray-50 p-6 rounded-2xl relative">
+                <i data-lucide="quote" class="w-8 h-8 text-loft-blue opacity-20 absolute top-4 left-4"></i>
+                <p class="text-gray-600 italic mb-4 mt-4">"The Learning Loft has been a blessing for our family. My son has blossomed socially and comes home singing new songs every day!"</p>
+                <div class="flex items-center">
+                    <div class="w-10 h-10 bg-loft-yellow rounded-full flex items-center justify-center text-white font-bold">J</div>
+                    <div class="ml-3">
+                        <p class="text-sm font-bold text-loft-dark">Jessica M.</p>
+                        <p class="text-xs text-gray-500">Mom of 2-year-old</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-gray-50 p-6 rounded-2xl relative">
+                <i data-lucide="quote" class="w-8 h-8 text-loft-blue opacity-20 absolute top-4 left-4"></i>
+                <p class="text-gray-600 italic mb-4 mt-4">"It feels like leaving my daughter with family. The communication is excellent, and I love the daily photo updates."</p>
+                <div class="flex items-center">
+                    <div class="w-10 h-10 bg-loft-pink rounded-full flex items-center justify-center text-white font-bold">M</div>
+                    <div class="ml-3">
+                        <p class="text-sm font-bold text-loft-dark">Mark T.</p>
+                        <p class="text-xs text-gray-500">Dad of Infant</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-gray-50 p-6 rounded-2xl relative">
+                <i data-lucide="quote" class="w-8 h-8 text-loft-blue opacity-20 absolute top-4 left-4"></i>
+                <p class="text-gray-600 italic mb-4 mt-4">"Clean, organized, and so much fun. The outdoor play area is amazing. Highly recommend!"</p>
+                <div class="flex items-center">
+                    <div class="w-10 h-10 bg-loft-green rounded-full flex items-center justify-center text-white font-bold">S</div>
+                    <div class="ml-3">
+                        <p class="text-sm font-bold text-loft-dark">Sarah L.</p>
+                        <p class="text-xs text-gray-500">Mom of Preschooler</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="py-20 bg-loft-light">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-white rounded-3xl shadow-xl overflow-hidden">
+            <div class="grid grid-cols-1 lg:grid-cols-2">
+                <div class="p-10 lg:p-16 bg-loft-dark text-white">
+                    <h2 class="text-3xl font-bold mb-6">Join Our Family</h2>
+                    <p class="text-blue-100 mb-8">
+                        We currently have 2 spots opening for the upcoming season. Schedule a tour to see if The Learning Loft is the right fit for your little one.
+                    </p>
+
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <i data-lucide="map-pin" class="w-6 h-6 text-loft-yellow mt-1"></i>
+                            <div class="ml-4">
+                                <h4 class="font-bold">Location</h4>
+                                <p class="text-blue-100 text-sm">123 Maple Avenue<br>Springfield, IL 62704<br><span class="text-xs opacity-75">(Exact address provided upon tour scheduling)</span></p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i data-lucide="phone" class="w-6 h-6 text-loft-yellow mt-1"></i>
+                            <div class="ml-4">
+                                <h4 class="font-bold">Phone</h4>
+                                <p class="text-blue-100 text-sm">(555) 123-4567</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i data-lucide="mail" class="w-6 h-6 text-loft-yellow mt-1"></i>
+                            <div class="ml-4">
+                                <h4 class="font-bold">Email</h4>
+                                <p class="text-blue-100 text-sm">hello@learningloftllc.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i data-lucide="clock" class="w-6 h-6 text-loft-yellow mt-1"></i>
+                            <div class="ml-4">
+                                <h4 class="font-bold">Hours</h4>
+                                <p class="text-blue-100 text-sm">Mon - Fri: 7:30 AM - 5:30 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p-10 lg:p-16">
+                    <form class="space-y-6" onsubmit="event.preventDefault(); alert('Thank you for your inquiry! We will contact you shortly.');">
+                        <div>
+                            <label for="parentName" class="block text-sm font-medium text-gray-700">Parent's Name</label>
+                            <input type="text" id="parentName" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-loft-blue focus:ring focus:ring-loft-blue focus:ring-opacity-50 px-4 py-3 bg-gray-50" placeholder="Jane Doe" required>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="childAge" class="block text-sm font-medium text-gray-700">Child's Age</label>
+                                <input type="text" id="childAge" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-loft-blue focus:ring focus:ring-loft-blue focus:ring-opacity-50 px-4 py-3 bg-gray-50" placeholder="e.g. 18 months" required>
+                            </div>
+                            <div>
+                                <label for="startDate" class="block text-sm font-medium text-gray-700">Desired Start Date</label>
+                                <input type="date" id="startDate" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-loft-blue focus:ring focus:ring-loft-blue focus:ring-opacity-50 px-4 py-3 bg-gray-50">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
+                            <input type="email" id="email" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-loft-blue focus:ring focus:ring-loft-blue focus:ring-opacity-50 px-4 py-3 bg-gray-50" placeholder="jane@example.com" required>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700">Message / Questions</label>
+                            <textarea id="message" rows="4" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-loft-blue focus:ring focus:ring-loft-blue focus:ring-opacity-50 px-4 py-3 bg-gray-50" placeholder="Tell us a little about your child..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-loft-blue text-white font-bold py-4 rounded-xl hover:bg-blue-600 transition shadow-lg transform hover:-translate-y-1">
+                            Send Inquiry
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-6 md:mb-0 text-center md:text-left">
+                <div class="flex items-center justify-center md:justify-start gap-2 mb-2">
+                    <i data-lucide="blocks" class="w-6 h-6 text-loft-yellow"></i>
+                    <span class="font-display font-bold text-2xl">The Learning Loft LLC</span>
+                </div>
+                <p class="text-gray-400 text-sm">Nurturing the future, one playdate at a time.</p>
+            </div>
+
+            <div class="flex space-x-6">
+                <a href="#" class="text-gray-400 hover:text-white transition"><i data-lucide="facebook" class="w-6 h-6"></i></a>
+                <a href="#" class="text-gray-400 hover:text-white transition"><i data-lucide="instagram" class="w-6 h-6"></i></a>
+            </div>
+        </div>
+        <div class="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-500">
+            &copy; 2023 The Learning Loft LLC. All rights reserved.
+        </div>
+    </div>
+</footer>
+
+<!-- Mobile Menu Script -->
+<script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+
+    // Mobile Menu Toggle
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+
+    btn.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+    });
+
+    // Close menu when clicking a link
+    const mobileLinks = menu.querySelectorAll('a');
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            menu.classList.add('hidden');
+        });
+    });
+
+    // Navbar Scroll Effect
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 10) {
+            navbar.classList.add('shadow-lg', 'bg-white/95', 'backdrop-blur-sm');
+        } else {
+            navbar.classList.remove('shadow-lg', 'bg-white/95', 'backdrop-blur-sm');
+        }
+    });
+</script>
+</body>
+</html>
