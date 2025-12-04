@@ -6,22 +6,44 @@
     <title>The Learning Loft LLC</title>
     <meta name="description" content="The Learning Loft LLC is an education-based in-home daycare in Kettering, Ohio.">
 
+    <script src="main.js" defer></script>
     <link rel="stylesheet" href="main.css">
 </head>
 
 <body>
 
 <nav class="header-bar">
-    <div class="title-section">
+    <div class="nav-container">
         <a href="#" class="title-link">
             <div class="title-icon round">
                 <img src="images/blocks.svg" class="icon" alt="Icon logo" width="24" height="24" />
             </div>
             <span class="title-text">The Learning Loft<span class="subtitle">LLC</span></span>
         </a>
+
+<!--        TODO: RYAN - fix links-->
+        <div class="hidden md-flex desktop-menu">
+            <a href="#home" class="menu-item">Home</a>
+            <a href="#about" class="menu-item">About Us</a>
+            <a href="#photos" class="menu-item">Photos</a>
+            <a href="#contact" class="menu-item primary round">Contact Us</a>
+        </div>
+
+        <div class="md-hidden flex mobile-menu-btn">
+            <button id="mobile-menu-btn">
+                <img src="images/menu.svg" class="icon" alt="Menu icon" width="32" height="32" />
+            </button>
+        </div>
     </div>
 
-<!--    TODO: RYAN - mobile header-->
+    <div id="mobile-menu" class="hidden md-hidden">
+        <div class="mobile-menu-items">
+            <a href="#home" class="mobile-menu-item">Home</a>
+            <a href="#about" class="mobile-menu-item">About Us</a>
+            <a href="#photos" class="mobile-menu-item">Photos</a>
+            <a href="#contact" class="mobile-menu-item primary">Contact Us</a>
+        </div>
+    </div>
 </nav>
 
 </body>
